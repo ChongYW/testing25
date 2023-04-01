@@ -30,7 +30,7 @@ class PostsController extends Controller
 
         auth()->user()->posts()->create($data);
 
-        return redirect('/');
+        return redirect('/home');
     }
 
     public function show(Post $post)

@@ -21,6 +21,9 @@ app.component('example-component', ExampleComponent);
 import AddComment from './components/AddComment.vue';
 app.component('add-comment', AddComment);
 
+import GetComments from './components/GetComments.vue';
+app.component('get-comments', GetComments);
+
 
 /**
  * The following block of code may be used to automatically register your

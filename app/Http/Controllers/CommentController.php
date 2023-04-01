@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Comment;
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class CommentController extends Controller
@@ -22,5 +23,10 @@ class CommentController extends Controller
 
         return response()->json($comment);
 
+    }
+
+    public function getComments(Post $post)
+    {
+        return response()->json($post->comments()->with('user')->latest()->get());
     }
 }

@@ -29,22 +29,8 @@
                             <br>
                             <br>
                             <br>
-                            <div class="row justify-content-center mb-1">
-                                <div class="col-md-10">
-                                    <div class="card">
-                                        <div class="card-header">Comments</div>
-                                        <div class="card-body">
-                                            <p>
-                                                <span class="badge badge-pill badge-dark">Ali Commented:</span> hey nice pic!
-                                            </p>
-                                            <p>
-                                                <span class="badge badge-pill badge-light">Ali Commented:</span> hey nice pic!
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <add-comment :userid="{{ $post -> user -> id }}" :postid="{{ $post -> id }}"></add-comment>
+                            <get-comments :userid="{{ Auth::user() -> id }}" :postid="{{ $post -> id }}"></get-comments>
+                            <add-comment :userid="{{ Auth::user() -> id }}" :postid="{{ $post -> id }}"></add-comment>
                             <hr>
                         </div>
                     @endforeach
